@@ -14,3 +14,11 @@ Sobel Use
   magnitude and scalling :  gradmag = np.sqrt(sobelx**2 + sobely**2)  scaled_sobel = np.uint8(255*gradmag/np.max(gradmag))
   direction : np.arctan2(sobely/sobely)
   
+1. camera clibratting--> generate coficient
+2. undistort image 
+3. thresholding -->> x - grad, y - grad, mag grad, directional grad find lane line --->>. binary image
+4. Color space changing --> chooseing color channels for finding lane line--- binary image
+5. combile 4 and 5 binary image
+6. percpective transformation
+7. detect lanes lines -- > ay2 + by + c
+8. calculate curvature
